@@ -1,0 +1,13 @@
+###  实战项目.gitignore文件书写 ###
+*.idea
+*.class
+*project
+*target
+
+*.war
+*.ear
+*.iml
+
+.project
+.classpath
+.settings
