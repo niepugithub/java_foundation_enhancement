@@ -1,0 +1,4 @@
+# java_foundation_enhancement
+java基础加强学习代码整理
+一个模块创建一个分支，比如multithread就是多线程的分支
+仅供自己学习使用
