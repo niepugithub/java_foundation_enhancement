@@ -37,6 +37,7 @@ public class ChainClient {
     }
 
     public static Object getTaskByProtocol(String protocol, JSONObject jsonObject) {
-        return httpHandler.transform(protocol, jsonObject);
+//        return httpHandler.transform(protocol, jsonObject);
+        return httpHandler.execute(protocol, jsonObject);
     }
 }

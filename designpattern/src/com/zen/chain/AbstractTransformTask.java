@@ -45,4 +45,17 @@ public abstract class AbstractTransformTask<T> {
     // 实际上是通过分发请求，虽然一开始并不知道前端传递是什么协议类型，但是将所有处理者
     // 循环一遍，总存在合适的处理者，而这个处理者肯定知道咋么处理前端的数据，是转为什么类型的task的
 
+    public final T execute(String protocol, JSONObject jsonObject) {
+        if (this.getLevel().equals(protocol)) {
+            return this.doBySon(jsonObject);
+        } else {
+            if (this.nextTransformTask != null) {
+                return (T) this.nextTransformTask.execute(protocol, jsonObject);
+            } else {
+                return null;
+            }
+        }
+    }
+
+    public abstract T doBySon(JSONObject jsonObject);
 }

@@ -1,5 +1,8 @@
 package com.zen.chain;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+
 /**
  * @description:
  * @author:niepu
@@ -11,5 +14,10 @@ public class TransformIcmpTask extends AbstractTransformTask<IcmpTask> {
     @Override
     protected String getLevel() {
         return "ICMP";
+    }
+
+    @Override
+    public IcmpTask doBySon(JSONObject jsonObject) {
+        return JSON.toJavaObject(jsonObject, IcmpTask.class);
     }
 }

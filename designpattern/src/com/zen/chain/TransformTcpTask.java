@@ -1,5 +1,8 @@
 package com.zen.chain;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+
 /**
  * @description:
  * @author:niepu
@@ -11,5 +14,10 @@ public class TransformTcpTask extends AbstractTransformTask<TcpTask> {
     @Override
     protected String getLevel() {
         return "TCP";
+    }
+
+    @Override
+    public TcpTask doBySon(JSONObject jsonObject) {
+        return JSON.toJavaObject(jsonObject, TcpTask.class);
     }
 }
