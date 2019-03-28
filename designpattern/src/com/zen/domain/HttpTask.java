@@ -1,4 +1,6 @@
-package com.zen.chain;
+package com.zen.domain;
+
+import com.zen.domain.Task;
 
 /**
  * @description:

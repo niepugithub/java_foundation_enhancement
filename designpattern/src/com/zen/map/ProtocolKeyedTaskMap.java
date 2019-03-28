@@ -1,9 +1,9 @@
 package com.zen.map;
 
-import com.zen.chain.HttpTask;
-import com.zen.chain.IcmpTask;
-import com.zen.chain.Task;
-import com.zen.chain.TcpTask;
+import com.zen.domain.HttpTask;
+import com.zen.domain.IcmpTask;
+import com.zen.domain.Task;
+import com.zen.domain.TcpTask;
 
 import java.util.HashMap;
 import java.util.Map;

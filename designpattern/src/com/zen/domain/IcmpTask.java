@@ -1,14 +1,17 @@
-package com.zen.chain;
+package com.zen.domain;
+
+import com.zen.domain.Task;
 
 /**
  * @description:
  * @author:niepu
  * @version:1.0
- * @date:2019/3/26 23:34
+ * @date:2019/3/26 23:33
  **/
-public class TcpTask extends Task {
+public class IcmpTask extends Task {
+
+
     private String hostIp;
-    private int port;
 
     public String getHostIp() {
         return hostIp;
@@ -18,25 +21,15 @@ public class TcpTask extends Task {
         this.hostIp = hostIp;
     }
 
-    public int getPort() {
-        return port;
-    }
-
-    public void setPort(int port) {
-        this.port = port;
-    }
-
-    public TcpTask(int timeout, int interval, String protocol, String ruleName, String hostIp, int port) {
+    public IcmpTask(int timeout, int interval, String protocol, String ruleName, String hostIp) {
         super(timeout, interval, protocol, ruleName);
         this.hostIp = hostIp;
-        this.port = port;
     }
 
     @Override
     public String toString() {
-        return "TcpTask{" +
+        return "IcmpTask{" +
                 "hostIp='" + hostIp + '\'' +
-                ", port=" + port +
                 '}';
     }
 }

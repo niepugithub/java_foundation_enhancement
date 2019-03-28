@@ -1,4 +1,4 @@
-package com.zen.chain;
+package com.zen.domain;
 
 /**
  * @description:
